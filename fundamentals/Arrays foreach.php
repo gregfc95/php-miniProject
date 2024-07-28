@@ -1,0 +1,93 @@
+<script src="https://unpkg.com/prettier/standalone.js"></script>
+<script src="https://unpkg.com/@prettier/plugin-php/standalone.js">
+await prettier.format(YOUR_CODE, {
+    plugins: prettierPlugins,
+    parser: "php",
+  });
+</script>
+<?php
+    //constantes, son estaticas
+    const NOMBRE = 'Gregorio';
+    $name = "Jose";
+    $isDev = true;
+    $age = 39;
+    $isOld = $age > 40;
+
+    $output = "Hola $name, con una edad de $age";
+/*     $outputAge = $isOld ? 'Eres viejo, lo siento!'
+    : 'Eres joven, felicidades';
+ */
+    $outputAge = match (true) {
+        $age < 2    => "Eres un bebe, $name",
+        $age < 10   => "Eres un niño, $name",
+        $age < 18   => "Eres un Adolescente, $name",
+        $age === 18 => "Eres mayor de edad, $name",
+        $age < 40   => "Eres un adulto joven, $name",
+        $age < 60   => "Estas viejo, $name",
+        default     => "Hueles a madera, $name",
+    };
+    
+    $bestLanguages = ["PHP", "JS", "Python"];
+    $bestLanguages[] = "Java";
+    $bestLanguages[] = "TypeScript";
+
+    $person = [
+        "name"=> "Jose",
+        "age"=> "78",
+        "isDev"=> true,
+        "languages" => ["PHP","JS","Python"],
+    ];
+    $person["name"] = "pheralb";
+    $person["Languages"][] = "Java";
+?>
+
+<ul>
+    <?php foreach ($bestLanguages as $key => $language) : ?>
+
+    <li><?= $key . " " . $language ?></li>
+
+    <?php endforeach; ?>
+</ul>
+
+$person = []
+
+<h2><?=$outputAge?></h2>
+
+
+
+<!-- sistema de plantillas de IF    
+<?php if ($isOld) : ?>
+    <h2>Eres Viejo, lo siento</h2>
+    <?php elseif ($isDev) : ?>
+        <h2>No eres viejo, pero eres dev. Te jodiste</h2>
+    <?php else : ?>   
+        <h2>Eres joven, bien!</h2>
+    <?php endif; ?>
+--> 
+    
+
+<!-- <?php 
+if ($isOld) {
+        echo "<h2>Eres Viejo, lo siento</h2>";
+    } elseif ($isDev) {
+        echo "<h2>No eres viejo, pero eres dev. Te jodiste</h2>";
+    }   else {
+        echo "<h2>Eres joves, bien!</h2>";
+    }
+
+?> -->
+
+
+
+
+<style>
+    :root {
+        color-scheme: light dark;
+    }
+
+    body {
+        display: grid;
+        place-content: center;
+    }
+
+</style>
