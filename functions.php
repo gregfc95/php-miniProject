@@ -18,4 +18,10 @@ function get_until_message (int $days):string
         default     => "$days days left until premier",
     };
 }
+
+function render_template (string $template, array $data = []) 
+{
+    extract($data);
+    require "templates/$template.php";
+}
 ?>
