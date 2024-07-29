@@ -1,7 +1,7 @@
 <?php 
 
 const API_URL = "https://whenisthenextmcufilm.com/api";
-require 'functions.php';
+require_once 'functions/functions.php';
 
 $data = get_data(API_URL);
 $untilMessage = get_until_message($data["days_until"]);
@@ -14,7 +14,7 @@ $untilMessageNext = get_until_message($data["following_production"]["days_until"
     <meta charset="UTF-8">
     <meta name="description" content="Next Marvel movie" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Next Marvel title</title>
+    <title>Next MCU title - <?= $data["title"]; ?></title>
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
