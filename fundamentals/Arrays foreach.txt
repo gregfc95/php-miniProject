@@ -1,10 +1,3 @@
-<script src="https://unpkg.com/prettier/standalone.js"></script>
-<script src="https://unpkg.com/@prettier/plugin-php/standalone.js">
-await prettier.format(YOUR_CODE, {
-    plugins: prettierPlugins,
-    parser: "php",
-  });
-</script>
 <?php
     //constantes, son estaticas
     const NOMBRE = 'Gregorio';
@@ -91,3 +84,4 @@ if ($isOld) {
     }
 
 </style>
+
